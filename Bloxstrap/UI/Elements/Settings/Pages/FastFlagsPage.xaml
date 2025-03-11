@@ -1,4 +1,4 @@
-﻿<ui:UiPage x:Class="Bloxstrap.UI.Elements.Settings.Pages.FastFlagsPage"
+<ui:UiPage x:Class="Bloxstrap.UI.Elements.Settings.Pages.FastFlagsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -88,6 +88,12 @@
             Description="{x:Static resources:Strings.Menu_FastFlags_Presets_FPSLimit_Description}" 
             HelpLink="https://github.com/bloxstraplabs/bloxstrap/wiki/A-guide-to-FastFlags#framerate-limit">
                     <ui:TextBox Margin="5,0,0,0" Padding="10,5,10,5" Width="200" Text="{Binding FramerateLimit, Mode=TwoWay}" PreviewTextInput="ValidateUInt32" />
+                </controls:OptionControl>
+
+                <controls:OptionControl 
+            Header="3D Grass Render Distance"
+            Description="Changes the max distance at which 3D grass can render.">
+                    <ui:TextBox Margin="5,0,0,0" Padding="10,5,10,5" Width="200" Text="{Binding GrassRenderLimit, Mode=TwoWay}" PreviewTextInput="ValidateInt32" />
                 </controls:OptionControl>
 
                 <controls:OptionControl 
@@ -256,7 +262,7 @@
                     <ui:ToggleSwitch IsChecked="{Binding PingBreakdown, Mode=TwoWay}" />
                 </controls:OptionControl>
             </StackPanel>
-    </ui:CardExpander>
+        </ui:CardExpander>
 
         <!--<ui:CardExpander Grid.Row="1" Margin="0,8,0,0" IsExpanded="False">
         <ui:CardExpander.Header>
@@ -288,4 +294,5 @@
             </ComboBox>
         </controls:OptionControl>-->
     </StackPanel>
+
 </ui:UiPage>
