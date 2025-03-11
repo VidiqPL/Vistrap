@@ -1,4 +1,4 @@
-﻿using Bloxstrap.Enums.FlagPresets;
+using Bloxstrap.Enums.FlagPresets;
 using System.Security.Policy;
 using System.Windows;
 
@@ -45,6 +45,7 @@ namespace Bloxstrap
             { "Rendering.Mode.OpenGL", "FFlagDebugGraphicsPreferOpenGL" },
             { "Rendering.Mode.D3D10", "FFlagDebugGraphicsPreferD3D11FL10" },
             { "Rendering.FixHighlights", "FFlagHighlightOutlinesOnMobile"},
+            { "Rendering.GrassLimit", "FIntFRMMaxGrassDistance" },
 
             // Preferred GPU
             { "Rendering.PreferredGPU", "FStringDebugGraphicsPreferredGPUName"},
