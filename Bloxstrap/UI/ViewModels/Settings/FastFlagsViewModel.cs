@@ -1,4 +1,4 @@
-﻿using System.Windows.Input;
+using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 using SharpDX.DXGI;
@@ -70,6 +70,13 @@ namespace Bloxstrap.UI.ViewModels.Settings
                 }
             }
         }
+
+        public int GrassRenderLimit
+        {
+            get => int.TryParse(App.FastFlags.GetPreset("Rendering.GrassLimit"), out int x) ? x : 99999;
+            set => App.FastFlags.SetPreset("Rendering.GrassLimit", value);
+        }
+
 
         public IReadOnlyDictionary<MSAAMode, string?> MSAALevels => FastFlagManager.MSAAModes;
 
